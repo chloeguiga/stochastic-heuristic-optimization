@@ -10,7 +10,6 @@ from sho import make, algo, iters, plot, num, bit, pb
 # Interface
 ########################################################################
 
-
 if __name__ == "__main__" or __name__ == "get_evaluation":
 
     import argparse
