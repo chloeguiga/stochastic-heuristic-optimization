@@ -26,11 +26,9 @@ if __name__ == "__main__":
     plot_representation.plot_ert(ert, title=METHOD_NAME + "_ert" + ", delta = " + str(DELTA), x_label="Budget",
                                  y_label="Probability (x > {})".format(str(DELTA)))
 
-    algo_comparison.compare_ert(METHOD_NAMES, deltas=DELTAS, nb_runs=N_RUNS)
+    #algo_comparison.compare_ert(METHOD_NAMES, deltas=DELTAS, nb_runs=N_RUNS)
 
-"""
     costs, qualities, eaf = evaluation_representation.create_eaf(runs)
-    plot_representation.plot_eaf(costs, qualities, eaf, title=METHOD_NAME + f"_eaf", y_label="Delta")
+    plot_representation.plot_eaf(costs, qualities, eaf, title=METHOD_NAME+"_eaf")
 
-"""
 

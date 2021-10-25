@@ -63,9 +63,6 @@ def create_ert(runs, delta):
     return ert_tranche
 
 
-
-
-"""
 def create_eaf(runs, nb_steps_probability=10):
     quality_min = min([min(run[1]) for run in runs])
     quality_max = max([max(run[1]) for run in runs])
@@ -78,4 +75,3 @@ def create_eaf(runs, nb_steps_probability=10):
     x, y = np.meshgrid(costs, qualities)
 
     return x, y, eaf
-"""

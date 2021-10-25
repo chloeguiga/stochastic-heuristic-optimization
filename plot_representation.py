@@ -38,11 +38,9 @@ def plot_ert(ert, title="", x_label="Budget", y_label="Probability"):
     plt.show()
 
 
-
-""" 
+@context_plot
 def plot_eaf(X, Y, eaf):
     fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
-    surf = ax.plot_surface(X, Y, eaf,
+    surf = ax.plot_surface(X, Y, eaf, cmap=cm.coolwarm,
                            linewidth=0, antialiased=False)
     fig.colorbar(surf)
-"""

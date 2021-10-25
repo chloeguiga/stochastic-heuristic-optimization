@@ -50,7 +50,7 @@ if __name__ == "__main__" or __name__ == "get_evaluation":
     can.add_argument("-a", "--variation-scale", metavar="RATIO", default=0.3, type=float,
                      help="Scale of the variation operators (as a ration of the domain width)")
 
-    can.add_argument("-p", "--plot", metavar="PLOT", default=true, type=bool,
+    can.add_argument("-p", "--plot", metavar="PLOT", default=True, type=bool,
                      help="PLots the sensors and the optimization curvess")
 
     the = can.parse_args()
@@ -231,3 +231,5 @@ if __name__ == "__main__" or __name__ == "get_evaluation":
         plt.show()
 
     get_evaluation.evaluation_run(costs, val, the.solver)
+
+    print(the.plot)

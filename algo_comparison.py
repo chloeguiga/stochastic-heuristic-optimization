@@ -34,6 +34,6 @@ def compare_ert(method_names, nb_runs=10, deltas=(600, 660, 675)):
 
     for ind_delta, delta in enumerate(deltas):
         for ind_method, ert in enumerate(method_names):
-            plt.plot(list_ert[ind_delta][ind_method], label=f"{method_names}: delta = {delta}")
+            plt.plot(list_ert[ind_delta][ind_method], label="method name : {}, delta = {}".format(ert, delta))
 
     return list_ert
