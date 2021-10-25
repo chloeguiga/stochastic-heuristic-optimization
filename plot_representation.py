@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import cm
 
 
 def context_plot(plotter):
@@ -35,3 +36,13 @@ def plot_ert(ert, title="", x_label="Budget", y_label="Probability"):
     plt.title(title)
     plt.plot(ert)
     plt.show()
+
+
+
+""" 
+def plot_eaf(X, Y, eaf):
+    fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
+    surf = ax.plot_surface(X, Y, eaf,
+                           linewidth=0, antialiased=False)
+    fig.colorbar(surf)
+"""

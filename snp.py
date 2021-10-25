@@ -50,6 +50,9 @@ if __name__ == "__main__" or __name__ == "get_evaluation":
     can.add_argument("-a", "--variation-scale", metavar="RATIO", default=0.3, type=float,
                      help="Scale of the variation operators (as a ration of the domain width)")
 
+    can.add_argument("-p", "--plot", metavar="PLOT", default=true, type=bool,
+                     help="PLots the sensors and the optimization curvess")
+
     the = can.parse_args()
 
     # Minimum checks.
@@ -189,12 +192,12 @@ if __name__ == "__main__" or __name__ == "get_evaluation":
         # sensors = bit.to_sensors(sol)
 
     # Fancy output.
-    if __name__ == "__main__":
+    if __name__ == "__main__" and the.plot:
         print("\nQuality {} \nSensors {}".format(val, sensors))
 
     shape = (the.domain_width, the.domain_width)
 
-    if __name__ == "__main__":
+    if __name__ == "__main__" and the.plot:
         print(make.cost)
         fig = plt.figure()
 
@@ -220,7 +223,7 @@ if __name__ == "__main__" or __name__ == "get_evaluation":
 
     # TODO: update cost definition
     costs = list(range(len(val)))
-    if __name__ == "__main__":
+    if __name__ == "__main__" and the.plot:
         plt.plot(val)
         plt.xlabel("Iteration cost")
         plt.ylabel("Quality")

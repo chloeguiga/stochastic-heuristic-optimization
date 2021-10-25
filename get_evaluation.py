@@ -1,4 +1,3 @@
-
 def evaluation_run(times, qualities, method_name):
     """
     Register the results of cost and quality over one run
@@ -47,10 +46,8 @@ def to_file(method_name):
     return "".join([method_name, ".txt"])
 
 
-
 def create_evaluation(n_runs, method_name="num_annealing"):
     clear_method(method_name)
     for k in range(n_runs):
         exec(open('snp.py').read())
     return None
-

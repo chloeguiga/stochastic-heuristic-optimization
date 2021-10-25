@@ -61,3 +61,21 @@ def create_ert(runs, delta):
         ert_tranche += ert_run
     ert_tranche /= n
     return ert_tranche
+
+
+
+
+"""
+def create_eaf(runs, nb_steps_probability=10):
+    quality_min = min([min(run[1]) for run in runs])
+    quality_max = max([max(run[1]) for run in runs])
+
+    deltas = np.linspace(quality_min, quality_max, nb_steps_probability)
+    eaf = np.array(list(map(lambda d: create_ert(runs, d), deltas)))
+    costs = np.arange(len(eaf[0]))
+    qualities = deltas
+
+    x, y = np.meshgrid(costs, qualities)
+
+    return x, y, eaf
+"""
