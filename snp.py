@@ -65,6 +65,8 @@ if __name__ == "__main__" or __name__ == "get_evaluation":
     # in case you would start "runs" in parallel.
     np.random.seed(the.seed)
 
+    print(the.plot)
+    print(type(the.plot))
     # Weird numpy way to ensure single line print of array.
     np.set_printoptions(linewidth=np.inf)
 

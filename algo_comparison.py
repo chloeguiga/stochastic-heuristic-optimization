@@ -18,7 +18,7 @@ def get_list_runs(method_names, nb_runs=10, deltas=(600, 660, 675)):
             # Runs for evaluation of a method
             get_evaluation.clear_method(method_name)
             for k in range(nb_runs):
-                os.system("python snp.py -p False --solver {}".format(method_name))
+                os.system("python snp.py --solver {}".format(method_name))
 
             runs = get_evaluation.get_data(method_name)
             runs_method.append(runs)
