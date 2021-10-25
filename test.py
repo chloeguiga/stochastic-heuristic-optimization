@@ -7,7 +7,7 @@ import plot_representation
 
 
 if __name__ == "__main__":
-    N_RUNS = 10
+    N_RUNS = 100
     METHOD_NAME = "num_annealing"
     RESOLUTION = 50
     DELTA = 600
