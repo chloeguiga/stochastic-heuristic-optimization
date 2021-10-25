@@ -30,10 +30,11 @@ def get_list_runs(method_names, nb_runs=10, deltas=(600, 660, 675)):
 def compare_ert(method_names, nb_runs=10, deltas=(600, 660, 675)):
 
     list_runs = get_list_runs(method_names, nb_runs=10, deltas=(600, 660, 675))
-    list_ert = [[evaluation.create_ert(runs, delta) for runs in list_runs] for delta in deltas]
+    list_ert = [[evaluation.create_ert(runs, delta) for runs in list_runs[ind]] for ind, delta in enumerate(deltas)]
 
     for ind_delta, delta in enumerate(deltas):
         for ind_method, ert in enumerate(method_names):
             plt.plot(list_ert[ind_delta][ind_method], label="method name : {}, delta = {}".format(ert, delta))
+            plt.legend()
 
     return list_ert

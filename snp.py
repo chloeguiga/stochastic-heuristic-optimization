@@ -35,7 +35,7 @@ if __name__ == "__main__" or __name__ == "get_evaluation":
                      help="Random pseudo-generator seed (none for current epoch)")
 
     solvers = ["num_greedy", "bit_greedy", "num_annealing", "bit_annealing", "num_stochastic", "bit_stochastic"]
-    can.add_argument("-m", "--solver", metavar="NAME", choices=solvers, default="num_stochastic",
+    can.add_argument("-m", "--solver", metavar="NAME", choices=solvers, default="num_annealing",
                      help="Solver to use, among: " + ", ".join(solvers))
 
     can.add_argument("-t", "--target", metavar="VAL", default=30 * 30, type=float,
@@ -50,7 +50,7 @@ if __name__ == "__main__" or __name__ == "get_evaluation":
     can.add_argument("-a", "--variation-scale", metavar="RATIO", default=0.3, type=float,
                      help="Scale of the variation operators (as a ration of the domain width)")
 
-    can.add_argument("-p", "--plot", metavar="PLOT", default=True, type=bool,
+    can.add_argument("-p", "--plot", metavar="PLOT", default=False, type=bool,
                      help="PLots the sensors and the optimization curvess")
 
     the = can.parse_args()
@@ -232,4 +232,3 @@ if __name__ == "__main__" or __name__ == "get_evaluation":
 
     get_evaluation.evaluation_run(costs, val, the.solver)
 
-    print(the.plot)
